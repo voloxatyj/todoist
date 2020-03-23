@@ -7,7 +7,6 @@ export const ProjectOverlay = ({
 	setShowProjectOverlay
 }) => {
 	const { projects } = useProjectsValue()
-	console.log(showProjectOverlay)
 
 	return (
 		projects && 

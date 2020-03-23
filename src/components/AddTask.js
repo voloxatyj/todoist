@@ -24,7 +24,7 @@ export const AddTask = ({
 	const addTask = () => {
 		const projectId = project || selectedProject
 		let collatedDate = ''
-
+		
 		if(projectId === 'TODAY') {
 			collatedDate = moment().format('DD/MM/YYYY')
 		} else if (projectId === 'NEXT_7') {
@@ -70,7 +70,7 @@ export const AddTask = ({
 					<span className="add-task_text">Add Task</span>
 				</div>
 			)}
-
+			
 			{(showMain || showQuickAddTask) && (
 				<div className="add-task_main" data-testid="add-task-main">
 					{showQuickAddTask && (
@@ -111,7 +111,11 @@ export const AddTask = ({
 					<button
 						type="button"
 						className="add-task_submit"
-						onClick={() => addTask()}
+						onClick={() => 
+							showQuickAddTask ? 
+							addTask() && setShowQuickAddTask(false) 
+							: addTask()
+						}
 					>
 						Add Task
 					</button>
