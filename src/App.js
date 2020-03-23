@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from './components/layout/Header';
-import { Context } from './components/layout/Context';
+import { Content } from './components/layout/Content';
 import { SelectedProjectProvider } from './context/selected-projects-context';
 import { ProjectsProvider } from './context/projects-context';
 
@@ -9,7 +9,7 @@ export const App = () => (
     <ProjectsProvider>
       <div className="App">
         <Header />
-        <Context />
+        <Content />
       </div>
     </ProjectsProvider>
   </SelectedProjectProvider>

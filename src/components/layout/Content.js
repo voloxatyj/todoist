@@ -2,11 +2,11 @@ import React from 'react'
 import { Sidebar } from './Sidebar'
 import { Tasks } from '../Tasks'
 
-export const Context = () => {
+export const Content = () => {
 	return (
-		<div>
+		<section className="content">
 			<Sidebar />	
 			<Tasks />
-		</div>
+		</section>
 	)
 }
