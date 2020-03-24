@@ -48,6 +48,9 @@ export const AddProject = ({ shouldShow = false }) => {
 								data-testid="hide-project-overlay"
 								className="add-project_cancel"
 								onClick={() => setShow(false)}
+							onKeyDown={() => setShow(false)}
+								tabIndex={0}
+								role="button"
 							>
 								Cancel
 							</span>
@@ -58,6 +61,9 @@ export const AddProject = ({ shouldShow = false }) => {
 						data-testid="add-project-action"
 						className="add-project_text"
 						onClick={() => setShow(!show)}
+						onKeyDown={() => setShow(!show)}
+						tabIndex={0}
+						role="button"
 						>
 							Add Project
 						</span>

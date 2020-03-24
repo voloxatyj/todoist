@@ -37,6 +37,9 @@ export const InduvidualProject = ({ project }) => {
 						<button
 							type="button"
 							onClick={() => deleteProject(project.docId)}
+							onKeyDown={() => deleteProject(project.docId)}
+							tabIndex={0}
+							role="button"
 						>
 							Delete
 						</button>

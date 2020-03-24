@@ -65,6 +65,9 @@ export const AddTask = ({
 					className="add-task_shallow"
 					data-testid="show-main-action"
 					onClick={() => setShowMain(!showMain)}
+					onKeyDown={() => setShowMain(!showMain)}
+					role="button"
+					tabIndex={0}
 				>
 					<span className="add-task_plus">+</span>
 					<span className="add-task_text">Add Task</span>
@@ -85,6 +88,13 @@ export const AddTask = ({
 										setShowProjectOverlay(false)
 										setShowQuickAddTask(false)
 									}}
+									onKeyDown={() => {
+										setShowMain(false)
+										setShowProjectOverlay(false)
+										setShowQuickAddTask(false)
+									}}
+									tabIndex={0}
+									role="button"
 								>
 									X
 								</span>
@@ -116,6 +126,13 @@ export const AddTask = ({
 							addTask() && setShowQuickAddTask(false) 
 							: addTask()
 						}
+						onKeyDown={() => 
+							showQuickAddTask ? 
+							addTask() && setShowQuickAddTask(false) 
+							: addTask()
+						}
+						role="button"
+						tabIndex={0}
 					>
 						Add Task
 					</button>

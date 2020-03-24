@@ -277,16 +277,15 @@ header {
       padding-right: 15px;
       text-align: -webkit-center;
       margin: 10px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -moz-inline-grid;
+      display: -webkit-flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+              justify-content: flex-end;
     }
 
     &-delete {
-      margin-left: auto;
+      margin-left: 5px;
       display: none;
 
       svg {

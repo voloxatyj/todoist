@@ -3,7 +3,7 @@ import { FaPizzaSlice } from 'react-icons/fa'
 import { AddTask } from '../AddTask'
 
 export const Header = ({ darkMode, setDarkMode }) => {
-	const [shouldShowMain, setShuoldShowMain] = useState(false)
+	const [shouldShowMain, setShouldShowMain] = useState(false)
 	const [showQuickAddTask, setShowQuickAddTask] = useState(false)
 
 	return (
@@ -19,8 +19,14 @@ export const Header = ({ darkMode, setDarkMode }) => {
 							className="settings_add"
 							onClick={() => {
 								setShowQuickAddTask(true)
-								setShuoldShowMain(true)
+								setShouldShowMain(true)
 							}}
+							onKeyDown={() => {
+								setShowQuickAddTask(true)
+								setShouldShowMain(true)
+							}}
+							tabIndex={0}
+							role="button"
 							>+</li>
 						<li 
 							data-testid="dark-mode-action"
@@ -28,6 +34,10 @@ export const Header = ({ darkMode, setDarkMode }) => {
 							onClick={() => {
 								setDarkMode(!darkMode)
 							}}
+							onKeyDown={() => {
+								setDarkMode(!darkMode)
+							}}
+							role="button"
 							>
 							<FaPizzaSlice />
 						</li>
